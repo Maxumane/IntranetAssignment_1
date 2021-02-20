@@ -1,4 +1,4 @@
-@model IEnumerable<consumeHockeyAPI.Models.Team>
+@model IEnumerable<consumeHockeyAPI.Models.Player>
 
 @{
     ViewData["Title"] = "Roster";
@@ -9,12 +9,12 @@
 
         <table class="table table-striped table-bordered">
             <tr>
-                <th>@Html.DisplayNameFor(model => model.name)</th>
+                <th>@Html.DisplayNameFor(model => model.person.fullName)</th>
             </tr>
             @foreach (var item in Model)
             {
                 <tr>
-                    <td><a asp-action="Details" asp-route-id="@item.id">@item.name</a></td>
+                    <td><a asp-action="PlayerDetails" asp-route-id="@item.person.id">@item.person.fullName</a></td>
                 </tr>
             }
         </table>

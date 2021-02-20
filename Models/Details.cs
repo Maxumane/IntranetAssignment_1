@@ -2,8 +2,8 @@ using System.Collections.Generic;
 
 namespace consumeHockeyAPI.Models
 {
-    public class Roster
+    public class Details
     {
-        public List<Player> roster {get; set;}
+        public List<PlayerDetail> people { get; set; }
     }
 }
