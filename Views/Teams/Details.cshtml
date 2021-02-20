@@ -1,0 +1,22 @@
+@model IEnumerable<consumeHockeyAPI.Models.Team>
+
+@{
+    ViewData["Title"] = "Roster";
+}
+
+    <div>
+        <h1 class="display-4">@ViewData["Title"]</h1>
+
+        <table class="table table-striped table-bordered">
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.name)</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td><a asp-action="Details" asp-route-id="@item.id">@item.name</a></td>
+                </tr>
+            }
+        </table>
+
+    </div>
